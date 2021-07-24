@@ -1,0 +1,13 @@
+diff --git a/config/BuildSystem/config/compilers.py b/config/BuildSystem/config/compilers.py
+index 282e9bf583..557a265239 100644
+--- a/config/BuildSystem/config/compilers.py
++++ b/config/BuildSystem/config/compilers.py
+@@ -36,7 +36,7 @@ class Configure(config.base.Configure):
+     if len(self.skipdefaultpaths):
+       return self.skipdefaultpaths
+     else:
+-      self.skipdefaultpaths = ['/usr/lib','/lib','/usr/lib64','/lib64']
++      self.skipdefaultpaths = ['/usr/lib','/lib','/usr/lib64','/lib64','/usr/lib/x86_64-linux-gnu']
+       conda_sysrt = os.getenv('CONDA_BUILD_SYSROOT')
+       if conda_sysrt:
+         conda_sysrt = os.path.abspath(conda_sysrt)

@@ -184,6 +184,7 @@ class Petsc(Package, CudaPackage, ROCmPackage):
     patch('xlf_fix-dup-petscfecreate.patch', when='@3.11.0')
     patch('disable-DEPRECATED_ENUM.diff', when='@3.14.1 +cuda')
     patch('petsc-logger.diff')
+    patch('petsc-ubuntu.diff')
 
     depends_on('diffutils', type='build')
 
